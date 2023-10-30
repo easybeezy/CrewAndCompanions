@@ -1,9 +1,12 @@
-<nav>
+{% load static %}
 
-            <div><a href="{% url 'home' %}">Home</a></div>
-            <div><a href="{% url 'wall' %}">Love Letters</a></div>
-            <div><a href="{% url 'resources' %}">Resources</a></div>
-            <div><a href="{% url 'about' %}">About</a></div>
-            <div class="pr-0.5"><a href="{% url 'contact' %}">Contact</a></div>
-
-</nav>
+<header id="main-header">
+    <img src="{% static 'images/CC_Horizontal.svg' %}" alt="CrewAndCompanions Logo">
+    <nav>
+        <div><a href="{% url 'home' %}">Home</a></div>
+        <div><a href="{% url 'wall' %}">Love Letters</a></div>
+        <div><a href="{% url 'resources' %}">Resources</a></div>
+        <div><a href="{% url 'about' %}">About</a></div>
+        <div class="pr-0.5"><a href="{% url 'contact' %}">Contact</a></div>
+    </nav>
+</header>
