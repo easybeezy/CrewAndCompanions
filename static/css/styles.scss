@@ -54,24 +54,25 @@ p {
     justify-content: space-between;
     align-items: center;
     padding: 48px 70px;
-}
-#main-header img {
-    max-width: 200px;
-}
-#main-header nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 48px;
-}
-#main-header nav a {
-    display: block;
-    padding: 8px 0;
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--navy-blue);
-    border-bottom: 2px solid var(--navy-blue);
+
+    img {
+        max-width: 200px;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+
+        a {
+            display: block;
+            padding: 8px 0;
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: var(--navy-blue);
+            border-bottom: 2px solid var(--navy-blue);
+        }
+    }
 }
