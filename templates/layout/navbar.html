@@ -1,12 +1,15 @@
 {% load static %}
 
 <header id="main-header">
-    <img src="{% static 'images/CC_Horizontal.svg' %}" alt="CrewAndCompanions Logo">
-    <nav>
-        <div><a href="{% url 'home' %}">Home</a></div>
-        <div><a href="{% url 'wall' %}">Love Letters</a></div>
-        <div><a href="{% url 'resources' %}">Resources</a></div>
-        <div><a href="{% url 'about' %}">About</a></div>
-        <div class="pr-0.5"><a href="{% url 'contact' %}">Contact</a></div>
-    </nav>
+    <div id="main-header-inner" class="content-inner">
+        <div id="btns-container">
+            <a href="{% url 'home' %}" id="header-brand"><img src="{% static 'images/CC_Horizontal.svg' %}" alt="CrewAndCompanions Logo"></a>
+            <button id="mobile-nav-btn"><img src="{% static 'images/hamburger-btn.svg' %}" alt="Hambuger Button"></button>
+        </div>
+        <nav id="header-nav">
+            <a href="{% url 'wall' %}" {% if request.resolver_match.url_name == 'wall' %}class="active"{% endif %}>Codex Entries</a>
+            <a href="{% url 'submissions' %}" {% if request.resolver_match.url_name == 'submissions' %}class="active"{% endif %}>Submit Your Own</a>
+            <a href="{% url 'resources' %}" {% if request.resolver_match.url_name == 'resources' %}class="active"{% endif %}>Resources</a>
+        </nav>
+    </div>
 </header>
