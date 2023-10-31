@@ -26,29 +26,45 @@ h1, h2, h3 {
     font-weight: bold;
 }
 h1 {
-    font-size: 40pt;
-    line-height: 42pt;
+    font-size: 40px;
+    line-height: 42px;
 }
 h2 {
-    font-size: 32pt;
-    line-height: 36pt;
+    font-size: 32px;
+    line-height: 36px;
 }
 h3 {
-    font-size: 20pt;
-    line-height: 28pt;
+    font-size: 20px;
+    line-height: 28px;
 }
 /* Paragraph Styles */
 p {
     font-family: 'Lato', sans-serif;
     font-weight: normal;
-    font-size: 16pt;
-    line-height: 24pt;
+    font-size: 16px;
+    line-height: 24px;
+}
+/* Body */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    main {
+        flex-grow: 1;
+    }
 }
 /* Containers */
-.content-inner {
+.inner {
     box-sizing: border-box;
     margin: 0 auto;
-    max-width: 1440px;
+
+    &.block-inner {
+        max-width: 1440px;
+    }
+    &.content-inner {
+        max-width: 1080px;
+    }
 }
 
 /**************
@@ -166,6 +182,66 @@ p {
                     border-bottom-color: unset;
                 }
             }
+        }
+    }
+}
+
+/*****************
+ * FOOTER STYLES *
+ *****************/
+#main-footer {
+    #about-section {
+        background-color: var(--navy-blue);
+        border-top: 32px solid var(--light-blue);
+
+        &.home {
+            border-top-color: var(--orange);
+        }
+        &.wall {
+            border-top-color: var(--gold);
+        }
+        &.submissions {
+            border-top-color: var(--purple);
+        }
+        .inner {
+            padding: 72px 70px;
+            text-align: center;
+            color: white;
+            
+            h2 {
+                margin-bottom: 24px;
+            }
+        }
+    }
+    #socials-section {
+        background-color: white;
+
+        .inner {
+            padding: 32px 70px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            p {
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 16px;
+                color: var(--navy-blue);
+            }
+            a {
+                display: contents;
+            }
+        }
+    }
+}
+@media screen and (max-width: 810px) {
+    #main-footer {
+        #about-section .inner {
+            padding: 72px 48px;
+        }
+        #socials-section .inner {
+            padding: 32px 48px;
+            justify-content: center;
         }
     }
 }

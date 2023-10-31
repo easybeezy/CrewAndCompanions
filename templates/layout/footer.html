@@ -1,0 +1,17 @@
+{% load static %}
+
+<footer id="main-footer">
+    <section id="about-section" class="{{ request.resolver_match.url_name }}">
+        <div class="inner content-inner">
+            <h2>About Crew + Companions</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue.</p>
+        </div>
+    </section>
+    <section id="socials-section">
+        <div class="inner block-inner">
+            <p>@CrewCompanions</p>
+            <a href=""><img src="{% static 'images/BlueSky.svg' %}" alt="BlueSky Logo"></a>
+            <a href="https://x.com/CrewCompanions"><img src="{% static 'images/x.svg' %}" alt="X Logo"></a>
+        </div>
+    </section>
+</footer>
