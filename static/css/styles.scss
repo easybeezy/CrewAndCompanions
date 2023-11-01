@@ -246,3 +246,80 @@ body {
     }
 }
 
+/********************
+ * HOME PAGE STYLES *
+ ********************/
+#home-main {
+    background-color: var(--purple);
+
+    .inner {
+        position: relative;
+
+        section {
+            background-color: white;
+            margin: 72px 70px 96px;
+            padding: 72px 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            
+            h1 {
+                margin-bottom: 24px;
+                color: var(--gold);
+            }
+            p {
+                margin-bottom: 48px;
+                color: var(--navy-blue);
+            }
+            h1, p {
+                max-width: 640px;
+            }
+            a {
+                display: block;
+                padding: 16px 24px;
+                background-color: var(--navy-blue);
+                color: white;
+                text-decoration: none;
+                width: fit-content;
+                font-family: 'Lato', sans-serif;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 24px;
+
+                &:hover {
+                    background-color: var(--gold);
+                }
+            }
+        }
+        img {
+            max-width: 120px;
+            position: absolute;
+            bottom: -38px;
+            left: calc(50% - 60px);
+        }
+    }
+}
+@media screen and (max-width: 810px) and (min-width: 531px) {
+    #home-main .inner section {
+        margin: 72px 48px 96px;
+        padding: 72px 48px;
+    }
+}
+@media screen and (max-width: 530px) {
+    #home-main {
+        .inner {
+            section {
+                margin: 0 0 96px;
+                padding: 48px 48px 72px;
+            }
+            img {
+                max-width: 90px;
+                position: absolute;
+                bottom: -28px;
+                left: calc(50% - 45px);
+            }
+        }
+    }
+}
+
