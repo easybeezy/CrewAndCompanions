@@ -1,11 +1,21 @@
 {% extends 'layout/base.html' %}
 
 {% block content %}
-
-Submission form
-    <form action="" method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-    <button type="submit">Submit</button>
-    </form>
+<main id="submissions-main">
+    <section id="submissions-text" class="submissions-outer">
+        <div class="submissions-inner">
+            <h1>Share You Love</h1>
+            <p>Our favorite video games are created by developers. Their creative vision and technical minds put their heart and soul into their work. Past and present devs, those who have been let go recently, those who have left long ago, and those who are still working. No matter how well publicized or invisible their contributions are or were. We want to let them know we appreciate them, not only as game devs, but as people too. Show your appreciation by posting something below! Even a simple "Thank you" could brighten someone's day!</p>
+        </div>
+    </section>
+    <section id="submissions-form" class="submissions-outer">
+        <div class="submissions-inner">
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form }}
+                <button class="gen-button" type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+</main>
 {% endblock content%}

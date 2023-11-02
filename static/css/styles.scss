@@ -323,3 +323,99 @@ body {
     }
 }
 
+/***************************
+ * SUBMISSIONS PAGE STYLES *
+ ***************************/
+#submissions-main {
+    display: flex;
+
+    .submissions-outer {
+        display: flex;
+        align-items: center;
+
+        .submissions-inner {
+            color: #373D5B;
+            max-width: 720px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 48px 70px;
+        }
+    }
+    #submissions-text {
+        justify-content: flex-end;
+        width: 50%;
+        background-color: var(--light-blue);
+        text-align: center;
+
+        h1 {
+            margin-bottom: 24px;
+        }
+    }
+    #submissions-form {
+        width: 50%;
+        background-color: white;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            /* hidden but still readable by screen readers for accessibility */
+            label {
+                position:absolute;
+                left:-10000px;
+                top:auto;
+                width:1px;
+                height:1px;
+                overflow:hidden;
+            }
+            input,
+            textarea {
+                box-sizing: border-box;
+                width: 100%;
+                margin-bottom: 16px;
+                border: 1px solid #373d5b80;
+                border-radius: 0;
+                padding: 16px;
+            }
+            textarea {
+                resize: none;
+            }
+            button {
+                padding: 16px 24px;
+                background-color: var(--navy-blue);
+                border: unset;
+                color: white;
+                font-family: 'Lato', sans-serif;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 24px;
+            
+                &:hover {
+                    background-color: var(--gold);
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 810px) {
+    #submissions-main {
+        flex-direction: column;
+    
+        .submissions-outer .submissions-inner {
+            padding: 48px;
+        }
+        #submissions-text {
+            width: 100%;
+            justify-content: center;
+        }
+        #submissions-form {
+            width: 100%;
+            justify-content: center;
+
+            form {
+                align-items: center;
+            }
+        }
+    }
+}
